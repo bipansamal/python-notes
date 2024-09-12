@@ -30,9 +30,9 @@ name = input("name:")
     # (1) while loop condition:
 # while True:
 #     print("hello")
-    # its Result = infinit hello .
+#     its Result = infinit hello .
 # To making finit hello its code is
-count =1
+# count =1
 while count<=5:
     print("hello")
     count +=1
