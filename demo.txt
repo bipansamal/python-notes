@@ -1,2 +1,0 @@
-i am lerning a pythan
-chapter 6 : function
