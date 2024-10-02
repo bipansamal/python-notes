@@ -1,52 +1,47 @@
-# Recursion funciton. (when a function calls itself repeatedly.)
-# def show(n):
-#     if(n == 0):
-#         return
-#     print(n)
-#     show(n-1)
+# Recursion funciton. (when a function calls itself repeatedly.) 4*3*2*1
+def show(n):
+    if(n == 0):
+        return
+    print(n)
+    show(n-1)
 
-# show(5)
+show(5)
 
-def printname (s1,s2,s3):
-    print("my name is",s1,s2,)
-    print("I am",s3,"years old")
-    # print("i live in",s4)
-    # print("i read in",s5)
+# Example 2 its important.
+def function(n):
+    if(n==0 or n==1):
+        return 1
+    else:
+        return n * function(n-1)
 
-s1 = input("enter your name:")
-s2 = input("enter your last name:")
-s3 = input("enter your age:")
-printname(s1,s2,s3)
+print(function(5))
 
+# RECURSION FUNCTION BY TAKING INPUT.
+n = int(input("enter your recursion number"))
+def function(n):
+    if(n==0 or n==1):
+        return 1
+    else:
+        return n * function(n-1)
 
-# def printname (q1,q2,q3):
-#     print("my age is",q1)
-#     print("i am",q2)
-#     print("i love",q3)
-
-# q1 = input("enter your age:")
-# q2 = input("enter your passion:")
-# q3 = input("enter your ideal:")
-# printname(q1,q2,q3)
+print(function(n))
 
 
-# files (there are two tpyes of file)
-# files can be used to perform operations on a file. (read & write data)
-# types of all file
-# 1) Text file : .txt, .docx, .log etc.
-# 2) Binary file : .mp4, .mov, .png, .jpeg etc.
+# SIMPLE FUNCTION
 
-# f = open("demo.txt", "r")
+def function(a,b,c):
+    print("My name is",a,b)
+    print("I am ",c,"years old")
+a = input("enter your name :")
+b = input("enter your last name :")
+c = int(input("enter your age" :))
 
-# data = f.read()
-# f.close()
+function(a,b,c)
 
-# print(data)
 
-f = open("demo.txt", "r")
-data = f.read()
-f.close()
-print(data)
+
+
+
 
 
 
