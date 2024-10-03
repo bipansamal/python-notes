@@ -26,4 +26,21 @@ for i in range(2,10,2):
     continue
 print(i)
 i == 10
-           
+
+
+# FULL MULTIPLICATION TABLE FROM 1 TO 12 
+
+def print_multiplication_tables(start=1, end=12, max_multiplier=10):
+    # Header
+    header = "\t".join([f"Table of {i}" for i in range(start, end + 1)])
+    print(header)
+    
+    # Generating the tables
+    for i in range(1, max_multiplier + 1):
+        row = []
+        for j in range(start, end + 1):
+            row.append(f"{j} × {i} = {j * i}")
+        print("\t".join(row))
+
+# Print multiplication tables for numbers 1 to 12
+print_multiplication_tables()
