@@ -11,6 +11,11 @@ n = int(input("enter the number"))
 for i in range(1, 11):
     print(i*n)
 
+# MULTABLE TABLE OF ANY GIVEN NUMBER BY USER.
+num = int(input("enter your number"))
+for i in range(1,11):
+    print(num,"*",i,"=",num*i)
+
 # odd number of 10. by using for loop.
 for i in range(1,10,2):
     print(i)
