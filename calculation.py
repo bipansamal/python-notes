@@ -1,3 +1,4 @@
+# CONVERTOR PERCENTAGE INTO GRADE
 mark = float(input("enter your grade:"))
 
 if (mark >= 101):
@@ -28,5 +29,11 @@ elif(mark >= 30):
 elif(mark >=20):
     grade = "NG"
 
-
 print("grade of the sutdent ->",grade)
+
+# CONVERTOR GPA INTO PERCENTAGE
+
+percentage =float(input("enter your gpa :"))
+GPA = (percentage / 4.0) * 100
+
+print(f"YOU Have :{GPA}%")
