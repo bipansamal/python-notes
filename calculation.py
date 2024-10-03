@@ -33,7 +33,13 @@ print("grade of the sutdent ->",grade)
 
 # CONVERTOR GPA INTO PERCENTAGE
 
-percentage =float(input("enter your gpa :"))
-GPA = (percentage / 4.0) * 100
+GPA =float(input("enter your gpa :"))
+per = (GPA / 4.0) * 100
 
-print(f"YOU Have :{GPA}%")
+print(f"YOU Have :{per}%")
+
+
+# CONVERTOR PERCENTAGE INTO GPA
+percentage =float(input("enter your percentage :"))
+gpa = (percentage / 100) * 4.0
+print(f"YOU Have :{gpa}")
