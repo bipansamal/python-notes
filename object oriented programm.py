@@ -1,86 +1,72 @@
 # del keybord 
 # used to delete object properties or object itself.
 # for example .
-# class student:
-#     def __init__(self,name):
-#         self.name = name
+class student:
+    def __init__(self,name):
+        self.name = name
 
-# s1 = student ("shradha")
-# print (s1.name)
-# del s1.name
-# print (s1.name)
+s1 = student("shradha")
+print (s1.name)
+del s1.name
+print (s1.name)
 
 # private (like) attributes & methods
 # conceptual Implementation in python
 # private attributes & method are meant to be used only with the class and aren't accessible from outside the class
 # for example
 
-# class Account:
-#     def __init__(self, acc_no, acc_pass ):
-#         self.acc_no = acc_no
-#         self.acc__pass = acc_pass
+class Account:
+    def __init__(self, acc_no, acc_pass ):
+        self.acc_no = acc_no
+        self.acc__pass = acc_pass
 
-# acc1 = Account("12345", "abcde")
-# print(acc1.acc_no)
+acc1 = Account("12345", "abcde")
+print(acc1.acc_no)
 
-# foe example
-# class person:
-#     __name = "anonymous"
-
-#     def __hello(self):
-#         print("hello person!")
-        
-#     def welcome(self):
-#         self.__hello()
-
-# p1 = person()
-
-# print(p1.welcome())
 
 # Inherintance(liny kam garx)
 # when one class(child/derived) derives the properties & method of another class(parent/base).
 
 # for example
-# class car:
-#     color = "black"
-#     @staticmethod
-#     def start():
-#         print("car start..")
+class car:
+    color = "black"
+    @staticmethod
+    def start():
+        print("car start..")
 
-#     @staticmethod
-#     def stop():
-#         print("car stopped.")
+    @staticmethod
+    def stop():
+        print("car stopped.")
 
-# class Toyotacar(car):
-#     def __init__(self, name):
-#         self.name = name
+class Toyotacar(car):
+    def __init__(self, name):
+        self.name = name
 
-# car1 = Toyotacar("fortuner")
-# car1 = Toyotacar("prius")
-
-# print(car1.color)
+car1 = Toyotacar("fortuner")
+print(car1.name)
+print(car1.color)
         
 
 # inherintance types , single inherintance, Multi-level inherintance, multiple inherintance
-# class car:
-#     @staticmethod
-#     def start():
-#         print("car start..")
+class car:
+    @staticmethod
+    def start():
+        print("car start..")
 
-#     @staticmethod
-#     def stop():
-#         print("car stopped.")
+    @staticmethod
+    def stop():
+        print("car stopped.")
 
-# class Toyotacar(car):
-#     def __init__(self, brand):
-#         self.brand = brand
+class Toyotacar(car):
+    def __init__(self, brand):
+        self.brand = brand
 
-# class Fortuner(Toyotacar):
-#     def __init__(self, type):
-#         self.type = type
+class Fortuner(Toyotacar):
+    def __init__(self, type):
+        self.type = type
 
-# car1 = Fortuner("diesel")
-# car1.start()
+car1 = Fortuner("diesel")
+car1.start()
 
 
 # for example
@@ -202,3 +188,30 @@ class Employee:
 
 e1 = Employee("accountant", "finance", "60,000")
 e1.showdetails()
+
+
+# taking parent property and adding new thing in child class.
+class Person:
+    def __init__(self,brand,color,model):
+        self.brand = brand
+        self.color = color
+        self.model = model
+    
+    def myname(self):
+        print(self.brand)
+        print(self.color)
+        print(self.model)
+
+class Child(Person):
+    def __init__(self,brand,color,model,type):
+        super().__init__(brand,color,model)
+        self.type = type
+    def mynames(self):
+        print(self.type)
+
+        
+
+
+name1 = Child("TATA","ORANGE",1990,"diseal")
+name1.myname()
+name1.mynames()
