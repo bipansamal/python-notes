@@ -42,62 +42,53 @@ s1 = student("tony stark", [99, 98, 97])
 s1.get_avg()    
 
 
-# # static method
-# # method that don't use the self parameter(work at class level)
-# # class student:
-# #     @staticmethod
-# #     def college():
-# #         print("ABC College")
-
 # # important
-# # Abstraction , Encapsulation
-# # Hiding the implementation details of a class and only showing the essential features to the user
-# # for example
-# class car:
-#     def __init__(self):
-#         self.acc = False
-#         self.brk = False
-#         self.clutch = False
-#     def start(self):
-#         self.clutch = True
-#         self.acc = True
-#         print("car start..")
+# Abstraction(private garny) 
+class car:
+    def __init__(self):
+        self.acc = False
+        self.brk = False
+        self.clutch = False
+    def start(self):
+        self.clutch = True
+        self.acc = True
+        print("car start..")
 
-# car1 = car()
-# car1.start()
+car1 = car()
+car1.start()
 
-# # Encapsulation
+# # Encapsulation  Encapulation(data ra function hunx object vitra tai Encapulation ho)
 # # wrapping data and functions into a single unit(object).
 
 
 # # lets pratice 
 # # create account class with 2 attributes - balance & account no. create method for debit, credit & printing thte balance
 
-# class account:
-#     def __init__(self, bal, acc):
-#         self.balance = bal
-#         self.account_no = acc
+class account:
+    def __init__(self, bal, acc):
+        self.balance = bal
+        self.account_no = acc
 
-#     #debit method 
-#     def debit(self, amount):
-#         self.balance -= amount
-#         print("Rs.", amount, "was debit")
-#         print("total balance = ", self.get_balance())
+    #debit method 
+    def debit(self, amount):
+        self.balance -= amount
+        print("Rs.", amount, "was debit")
+        print("total balance = ", self.get_balance())
 
 
-#     def credit(self, amount):
-#         self.balance += amount
-#         print("Rs.", amount, "was credit")
-#         print("total balance = ", self.get_balance())
+    def credit(self, amount):
+        self.balance += amount
+        print("Rs.", amount, "was credit")
+        print("total balance = ", self.get_balance())
 
-#     def get_balance(self):
-#         return self.balance
+    def get_balance(self):
+        return self.balance
 
-# acc1 = account(10000, 12345)
-# acc1.debit(1000)
-# acc1.credit(500)
-# acc1.credit(40000)
-# acc1.debit(10000)
+acc1 = account(10000, 12345)
+acc1.debit(1000)
+acc1.credit(500)
+acc1.credit(40000)
+acc1.debit(10000)
 
 
 
