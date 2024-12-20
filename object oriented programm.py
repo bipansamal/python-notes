@@ -14,7 +14,8 @@ print (s1.name)
 # conceptual Implementation in python
 # private attributes & method are meant to be used only with the class and aren't accessible from outside the class
 # for example
-
+# Note
+## Private attrubutes define by >>>>__<<<<< double underscore .... watch it
 class Account:
     def __init__(self, acc_no, acc_pass ):
         self.acc_no = acc_no
